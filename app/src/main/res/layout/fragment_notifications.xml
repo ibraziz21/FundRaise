@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<ImageView
+    android:layout_marginTop="20dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="85dp"
+    android:layout_height="85dp"
+    android:src="@mipmap/ic_profile_round"
+    />
+
+    <TextView
+        android:layout_marginTop="25dp"
+    android:id="@+id/userEmail"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="@drawable/textdesign"
+    android:gravity="center_horizontal"
+    />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/userNme"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+    android:background="@drawable/textdesign"
+        android:gravity="center_horizontal"
+
+        />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttondesign"
+        android:text="Log out"
+
+        />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+
+        android:layout_marginTop="25dp"    android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo1"
+            android:layout_marginBottom="30dp"
+            />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Registration"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:textAllCaps="true"
+            android:textColor="#05fa36"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailwrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Email"
+                app:helperText="gjg"
+                android:background="@drawable/textdesign"
+                android:drawableLeft="@drawable/ic_mail_24dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="5dp"
+            android:id="@+id/usernamewrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Username"
+                app:helperText="gjg"
+                android:background="@drawable/textdesign"
+                android:drawableLeft="@drawable/ic_person_24dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordwrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:helperText="gjg"
+                android:background="@drawable/textdesign"
+                android:drawableLeft="@drawable/ic_lock_24dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmwrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Confirm Password"
+                app:helperText="gjg"
+                android:inputType="textPassword"
+                android:background="@drawable/textdesign"
+                android:drawableLeft="@drawable/ic_lock_24dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:onClick="SignUp"
+            android:background="@drawable/buttondesign"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have an Account? Login Here"
+            android:textSize="20sp"
+            android:clickable="true"
+            android:textColor="#05fa36"
+            android:onClick="login"/>
+    </LinearLayout>
+</RelativeLayout>
