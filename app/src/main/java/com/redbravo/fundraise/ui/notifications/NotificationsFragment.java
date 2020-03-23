@@ -45,7 +45,7 @@ TextView username;
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ParseUser.logOut();
+               // ParseUser.logOut();
                 Intent intent=new Intent(getContext(), MainActivity.class);
                 startActivity(intent);
             }

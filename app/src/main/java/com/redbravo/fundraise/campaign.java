@@ -90,8 +90,7 @@ button.setOnClickListener(new View.OnClickListener() {
                             public void done(ParseException e) {
                                 if(e==null){
                                     Toast.makeText(campaign.this, "Successfully Commited amount", Toast.LENGTH_SHORT).show();
-                                    Intent intent=new Intent(campaign.this,Home.class);
-                                    startActivity(intent);
+
                                 }else{
                                     e.printStackTrace();
                                 }
@@ -105,8 +104,11 @@ button.setOnClickListener(new View.OnClickListener() {
             }
         });
 
+        Intent intent = new Intent(getApplicationContext(),Payment.class);
+        startActivity(intent);
     }
 });
+
     }
 /*
     public void commit(View view) {
