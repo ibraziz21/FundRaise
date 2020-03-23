@@ -6,17 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".campaign">
-
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fundraise" />
+<ScrollView
+    app:layout_constraintTop_toBottomOf="@id/logo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 <LinearLayout
     app:layout_constraintTop_toTopOf="parent"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-      <ImageView
-            android:layout_marginTop="3dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/fundraise" />
+
+
+
+
     <TextView
 
         android:layout_marginTop="20dp"
@@ -28,12 +36,13 @@
         android:textColor="@color/colorPrimary"
 
         />
-    <TextView
-        android:layout_marginTop="10dp"
-        android:id="@+id/shortDescript"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+
+
         />
     <TextView
 android:layout_marginTop="10dp"
@@ -60,7 +69,7 @@ android:layout_marginTop="10dp"
 
 
 </LinearLayout>
-
+</ScrollView>
 
     <com.google.android.material.textfield.TextInputLayout
             app:layout_constraintBottom_toTopOf="@id/commitamt"
