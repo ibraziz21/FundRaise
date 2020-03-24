@@ -19,16 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/fundraise" />
-    <ImageView
-        android:id="@+id/imageupload"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:clickable="true"
-           android:onClick="imageupload"
-        android:background="@drawable/textdesign"
-        android:tag="Upload Image"
-        android:src="@drawable/picholder"
-        />
+
 
     <com.google.android.material.textfield.TextInputLayout
 android:layout_marginTop="50dp"
@@ -38,7 +29,7 @@ android:layout_marginTop="50dp"
             android:id="@+id/campaign"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:hint="  Campaign Name"
+            android:hint="Project Name"
             android:background="@drawable/textdesign"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -52,7 +43,7 @@ android:layout_marginTop="50dp"
             android:id="@+id/shortdesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="  Short Description"
+            android:hint="Who does it benefit?"
             android:inputType="textMultiLine"
             android:overScrollMode="always"
             android:scrollbarStyle="insideInset"
@@ -86,7 +77,7 @@ android:layout_marginTop="50dp"
         android:id="@+id/LongDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="  Long Description"
+        android:hint="Description"
         android:inputType="textMultiLine"
         android:overScrollMode="always"
         android:scrollbarStyle="insideInset"
@@ -95,7 +86,42 @@ android:layout_marginTop="50dp"
 
 
 
+
     </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Mpesadetails"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="MPESA paybill + account"
+            android:background="@drawable/textdesign"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Other payment/extra details"
+            android:background="@drawable/textdesign"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/imageupload"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:clickable="true"
+        android:onClick="imageupload"
+
+        android:tag="Upload Image"
+        android:src="@drawable/picholder"
+
+        />
     <Button
         android:layout_marginTop="10dp"
         android:id="@+id/addCamp"

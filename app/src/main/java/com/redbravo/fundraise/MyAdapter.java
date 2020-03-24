@@ -2,9 +2,11 @@ package com.redbravo.fundraise;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,13 +21,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private LayoutInflater layoutInflater;
     private List<String> data;
     private List<String> desc;
+    private List<Bitmap> img;
 
 
-
-    public MyAdapter(Context context, ArrayList<String> campaign, ArrayList<String>desc){
+    public MyAdapter(Context context, ArrayList<String> campaign, ArrayList<String>desc, ArrayList<Bitmap>images){
         this.layoutInflater = LayoutInflater.from(context);
         this.data = campaign;
         this.desc =desc;
+        this.img =images;
     }
 
     @NonNull
@@ -43,6 +46,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         String description = desc.get(position);
         holder.textDescription.setText(description);
 
+       Bitmap bitmap =img.get(position);
+        holder.image.setImageBitmap(bitmap);
     }
 
 
@@ -56,7 +61,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView textTitle,textDescription;
-
+        ImageView image;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +74,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             });
             textTitle = itemView.findViewById(R.id.textTitle);
             textDescription = itemView.findViewById(R.id.textDesc);
+            image = itemView.findViewById(R.id.imagerow);
         }
     }
 }
